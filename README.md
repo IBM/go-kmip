@@ -6,7 +6,8 @@ go-kmip
 [![Documentation](https://godoc.org/github.com/smira/go-kmip?status.svg)](http://godoc.org/github.com/smira/go-kmip)
 [![Go Report Card](https://goreportcard.com/badge/github.com/smira/go-kmip)](https://goreportcard.com/report/github.com/smira/go-kmip)
 
-go-kmip implements subset of [KMIP 1.4](http://docs.oasis-open.org/kmip/spec/v1.4/os/kmip-spec-v1.4-os.html) protocol.
+go-kmip implements subset of [KMIP 1.4](http://docs.oasis-open.org/kmip/spec/v1.4/os/kmip-spec-v1.4-os.html) protocol.  This is a fork fo the go-kmip project
+can support netapp data systems
 
 Basic TTLV encoding/decoding is fully implemented, as well as the basic client/server operations. 
 Other operations and fields could be implemented by adding required Go structures with KMIP tags.
@@ -27,8 +28,3 @@ any number of requests over the connection.
 
 This package doesn't implement any actual key processing or management - it's outside
 the scope of this package.
-
-License
--------
-
-This code is licensed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/).
