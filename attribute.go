@@ -36,6 +36,8 @@ func (a *Attribute) BuildFieldValue(name string) (v interface{}, err error) {
 		v = &Name{}
 	case ATTRIBUTE_NAME_DIGEST:
 		v = &Digest{}
+	case "x-NETAPP-ClusterId", "x-NETAPP-ClusterName", "x-NETAPP-NodeId", "x-NETAPP-NodeName", "x-NETAPP-PartnerClusterId", "x-NETAPP-PartnerClusterName", "x-NETAPP-PartnerNodeId", "x-NETAPP-PartnerNodeName", "x-NETAPP-Product", "x-NETAPP-Version", "x-NETAPP-KeyUsage", "x-NETAPP-KeyType", "x-NETAPP-VserverId", "x-NETAPP-VserverUuid", "x-NETAPP-VolumeId", "x-NETAPP-VolumeIdHash", "x-NETAPP-CRN", "x-NETAPP-Policy", "x-NETAPP-KeyId", "x-NETAPP-Tag":
+		v = ""
 	default:
 		err = errors.Errorf("unsupported attribute: %v", a.Name)
 	}
