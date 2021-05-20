@@ -110,7 +110,7 @@ func getStructDesc(tt reflect.Type) (*structDesc, error) {
 		}
 
 		if err := guessType(ft, &f); err != nil {
-			return nil, errors.WithMessagef(err, "error processing field %v", ff.Name)
+			return nil, errors.Wrapf(err, "error processing field %v", ff.Name)
 		}
 
 		res.fields = append(res.fields, f)
