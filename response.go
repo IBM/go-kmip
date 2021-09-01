@@ -74,6 +74,8 @@ func (bi *ResponseBatchItem) BuildFieldValue(name string) (v interface{}, err er
 		v = &RegisterResponse{}
 	case OPERATION_LOCATE:
 		v = &LocateResponse{}
+	case OPERATION_QUERY:
+		v = &QueryResponse{}
 	default:
 		err = errors.Errorf("unsupported operation: %v", bi.Operation)
 	}
